@@ -9,47 +9,36 @@
 </head>
 <body>
 
-    <header class="navbar">
-    <div class="container navbar-content">
-        <div class="navbar-left">
-            <a href="#" class="logo">
-                <img src="images/image-removebg-preview 6.svg" alt="Logo Edulink" class="logo-img">
-            </a>
+    <section class="header">
+        <!-- Background Elements -->
+        <div class="bg-elements">
+            <img src="images/Group 327.svg" alt="Background">
         </div>
-        <nav class="navbar-center">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="index.html#tutors">Tutores</a></li>
-                <li><a href="index.html#testimonials">Alunos</a></li>
-                <li><a href="index.html#about">Sobre nós</a></li>
-                <li><a href="index.html#team">Equipa</a></li>
-            </ul>
-        </nav>
-        <div class="navbar-right">
-            <div class="user-profile-dropdown">
-                <a href="#" class="icon-btn user-avatar-btn">
-                    <img src="images/icon.svg" alt="Avatar do Usuário" class="user-avatar-icon">
-                    <i class="fas fa-chevron-down"></i>
-                </a>
 
-                <div class="dropdown-menu">
-                    <div class="user-info-header">
-                        <img src="images/betriz.png" alt="Foto de Perfil do Usuário" class="header-profile-pic">
-                        <span class="header-username">Beatriz Sousa</span>
-                    </div>
-                    <hr class="dropdown-separator">
-                    <div class="dropdown-links">
-                        <a href="perfiltutor.html"><img src="images/icon.svg" ></i> Perfil</a>
-                        <a href="notificacoes.html"><img src="images/notificacoes.png"> Notificações</a>
-                        <a href="agenda_tutor.html"><img src="images/calendario.png"> Agenda</a>
-                        <a href="chat_tutor.html"><img src="images/chat.png"> Chat</a>
-                        <a href="entrar.html"><img src="images/sair.png"> Sair</a>
-                    </div>
+    <!-- Header -->
+        <header>
+            <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="images/image-removebg-preview 6.svg" alt="Logo">
                 </div>
             </div>
-        </div>
-    </div>
-</header>
+
+            <div class="nav-container">
+                <nav>
+                <a href="index.html">Início</a>
+                <a href="index.html#tutors">Tutores</a>
+                <a href="index.html#testimonials">Alunos</a>
+                <a href="index.html#about">Sobre nós</a>
+                <a href="index.html#team">Equipa</a>
+                <a href="formulario.html">Queres ser tutor?</a>
+                </nav>
+                <img src="images/icon.svg" alt="Profile">
+            </div>
+            </div>
+        </header>
+</section>
+
     <main>
         <section class="user-profile-section container">
             <div class="profile-card">
@@ -134,10 +123,11 @@
     </main>
 
     <footer>
-        <div class="container">
-            <p>Copyright © Edulink 2025</p>
-        </div>
-    </footer>
+    <div class="container">
+        <p>Copyright © EduLink 2025</p>
+    </div>
+</footer>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
