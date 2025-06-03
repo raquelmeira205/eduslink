@@ -7,46 +7,55 @@
 </head>
 <body>
     <!-- Header (igual ao do tutor) -->
-  <header class="navbar">
-  <div class="container navbar-content">
-    <div class="navbar-left">
-      <a href="index.html" class="logo">
-        <img src="images/image-removebg-preview 6.svg" alt="Logo Edulink" class="logo-img">
-      </a>
-    </div>
-    <nav class="navbar-center">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="index.html#tutors">Tutores</a></li>
-        <li><a href="index.html#testimonials">Alunos</a></li>
-        <li><a href="index.html#about">Sobre nós</a></li>
-        <li><a href="index.html#team">Equipa</a></li>
-      </ul>
-    </nav>
-    <div class="navbar-right">
-      <div class="user-profile-dropdown">
-        <a href="#" class="icon-btn user-avatar-btn">
-          <img src="images/mariana.svg" alt="Avatar do Aluno" class="user-avatar-icon">
-          <i class="fas fa-chevron-down"></i>
-        </a>
-        <div class="dropdown-menu">
-          <div class="user-info-header">
-            <img src="images/beatriz.svg" alt="Foto de Perfil de Beatriz Sousa" class="header-profile-pic">
-            <span class="header-username">Beatriz Sousa</span>
-          </div>
-          <hr class="dropdown-separator">
-          <div class="dropdown-links">
-            <a href="perfilaluno.html"><img src="images/icon.svg" alt=""> Perfil</a>
-            <a href="procurartutor.html"><img src="images/notificacoes.png" alt=""> Procurar Tutor</a>
-            <a href="agenda_aluno.html"><img src="images/calendario.png" alt=""> Agenda</a>
-            <a href="chat_aluno.html"><img src="images/chat.png" alt=""> Chat</a>
-            <a href="entrar.html"><img src="images/sair.png" alt=""> Sair</a>
-          </div>
+  <section class="header">
+        <!-- Background Elements -->
+        <div class="bg-elements">
+            <img src="images/Group 327.svg" alt="Background">
         </div>
-      </div>
-    </div>
-  </div>
-</header>
+
+    <!-- Header -->
+        <header>
+            <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="images/image-removebg-preview 6.svg" alt="Logo">
+                </div>
+            </div>
+
+            <div class="nav-container">
+                <nav>
+                <a href="index.html">Início</a>
+                <a href="index.html#tutors">Tutores</a>
+                <a href="index.html#testimonials">Alunos</a>
+                <a href="index.html#about">Sobre nós</a>
+                <a href="index.html#team">Equipa</a>
+                <a href="formulario.html">Queres ser tutor?</a>
+                </nav>
+                <div class="user-profile-dropdown">
+                    <a href="#" class="icon-btn user-avatar-btn">
+                        <img src="images/mariana.svg" alt="Avatar do Aluno" class="user-avatar-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="user-info-header">
+                            <img src="images/beatriz.svg" alt="Foto de Perfil de Beatriz Sousa" class="header-profile-pic">
+                            <span class="header-username">Beatriz Sousa</span>
+                        </div>
+                        <hr class="dropdown-separator">
+                        <div class="dropdown-links">
+                            <a href="perfilaluno.html"><img src="images/icon.svg" alt=""> Perfil</a>
+                            <a href="procurartutor.html"><img src="images/notificacoes.png" alt=""> Procurar Tutor</a>
+                            <a href="agenda_aluno.html"><img src="images/calendario.png" alt=""> Agenda</a>
+                            <a href="chat_aluno.html"><img src="images/chat.png" alt=""> Chat</a>
+                            <a href="entrar.html"><img src="images/sair.png" alt=""> Sair</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </header>
+</section>
+
   <div class="chat-container">
     <aside class="sidebar">
       <div class="messages-title">Mensagens</div>
@@ -84,8 +93,11 @@
   </div>
 
   <footer>
-    Copyright © Edulink 2025
-  </footer>
+    <div class="container">
+        <p>Copyright © EduLink 2025</p>
+    </div>
+</footer>
+
 
   <!-- Incluir cliente Socket.IO -->
   <script src="/socket.io/socket.io.js"></script>
