@@ -1,0 +1,315 @@
+/* ======================================
+   procurartutor.css
+   CSS completo para a página “Procurar Tutor”
+   Inclui cabeçalho, secção de busca e cartões de tutor
+   ====================================== */
+
+/* Fonte Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --color-primary: #2C4066;
+  --color-secondary: #D3D6C5;
+  --color-text: #2E3B46;
+  --color-bg: #f5f5f5;
+  --color-card-bg: #ffffff;
+  --color-card-shadow: rgba(0, 0, 0, 0.1);
+  --color-accent: #084fc7;
+  --color-rating-star: #FFA500;
+}
+
+/* ===== Reset e estilos globais ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header (mesmo estilo que nas outras páginas) ===== */
+header {
+  background-color: var(--color-secondary);
+  position: relative;
+  z-index: 10;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 215px;
+  padding: 50px 0;
+}
+
+
+.logo .logo-icon img {
+  width: 100px;
+  height: auto;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+nav a {
+  margin: 0 20px;
+  font-size: 16px;
+  color: var(--color-text);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--color-accent);
+}
+
+.profile-menu-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.profile-icon img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--color-secondary);
+  min-width: 160px;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+}
+
+.dropdown-menu ul li a {
+  display: block;
+  padding: 12px 16px;
+  color: var(--color-text);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu ul li a:hover {
+  background-color: #e2e5d4;
+}
+
+.profile-menu-container:hover .dropdown-menu {
+  display: block;
+}
+
+/* ===== Secção “Procurar Tutor” ===== */
+.procurartutor-section {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Linha de busca e filtros */
+.procura-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.opcoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.opcoes select {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.opcoes select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* Contêiner de cartões de tutor */
+#accounts-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Link que envolve todo o cartão para tornar clicável */
+.tutor-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Cartão de tutor */
+.tutor-card {
+  background-color: var(--color-card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--color-card-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.tutor-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px var(--color-card-shadow);
+}
+
+/* Imagem do tutor dentro do cartão */
+.tutor-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Informação textual dentro do cartão */
+.tutor-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tutor-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.2em;
+  color: var(--color-primary);
+}
+
+.tutor-subject {
+  margin: 0 0 10px 0;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.tutor-rating {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: var(--color-rating-star);
+}
+
+.rating-number {
+  font-weight: bold;
+  margin-right: 5px;
+  color: var(--color-text);
+}
+
+.star {
+  font-size: 1.2em;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--color-secondary);
+  text-align: center;
+  padding: 10px 0;
+  color: var(--color-text);
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 992px) {
+  .header-container {
+    margin: 0 20px;
+    padding: 20px 0;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+
+  .procura-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .opcoes {
+    margin-top: 15px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  #accounts-div {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .header-container {
+    margin: 0 20px;
+    padding: 20px 0;
+  }
+
+  .form-input, 
+  .opcoes select {
+    width: 100%;
+    max-width: none;
+  }
+
+  .opcoes {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #accounts-div {
+    grid-template-columns: 1fr;
+  }
+}

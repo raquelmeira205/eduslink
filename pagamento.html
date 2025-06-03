@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pagamento – EduLink</title>
+  <!-- Agora usamos o mesmo CSS da Agenda -->
+  <link rel="stylesheet" href="css/pagamento.css" />
+</head>
+<body>
+  <!-- Header idêntico ao da Agenda -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">
+          <img src="images/image-removebg-preview 6.svg" alt="Logo">
+        </div>
+      </div>
+
+      <div class="nav-container">
+        <nav>
+          <a href="index.html">Início</a>  
+          <a href="index.html#tutors">Tutores</a>
+          <a href="index.html#testimonials">Alunos</a>
+          <a href="index.html#about">Sobre nós</a>
+          <a href="index.html#team">Equipa</a>
+          <a href="formulario.html">Queres ser tutor?</a>
+        </nav>
+        <div class="profile-menu-container">
+          <div class="profile-icon">
+            <img src="images/icon.svg" alt="Ícone de Perfil">
+          </div>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="perfilaluno.html">Meu Perfil</a></li>
+              <li><a href="procurartutor.html">Procurar Tutor</a></li>
+              <li><a href="agenda_aluno.html">Agenda</a></li>
+              <li><a href="chat.html">Chat</a></li>
+              <li><a href="entrar.html">Sair</a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal na mesma estrutura de container usada pela Agenda -->
+  <main class="agenda-container">
+    <h1>Agendar Sessão</h1>
+    <form id="booking-form" action="agenda_aluno.html" method="GET">
+      <!-- 1. Informações do Tutor -->
+      <section class="card section-light">
+        <h2><span class="step">1</span> Informações do Tutor</h2>
+        <div class="tutor-info">
+          <div class="tutor-text">
+            <p><strong>Nome:</strong> <span id="tutor-name">Beatriz Sousa</span></p>
+            <p><strong>Aula:</strong> <span id="tutor-subject">O Renascimento</span></p>
+            <p><strong>Preço por sessão:</strong> <span id="tutor-price">5€</span></p>
+            <blockquote>
+              Sou apaixonada por História e acredito que entender o passado nos ajuda a
+              perceber melhor o mundo de hoje. Dou explicações de forma clara, com exemplos
+              práticos e adaptados a cada aluno, sempre com o objetivo de tornar a matéria
+              interessante e fácil de memorizar.
+            </blockquote>
+          </div>
+          <div class="tutor-photo">
+            <img src="images/beatriz.svg" alt="Foto do Tutor">
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Informações da Sessão -->
+      <section class="card section-light">
+        <h2><span class="step">2</span> Informações da Sessão</h2>
+        <div class="session-fields">
+          <label>
+            Dia:
+            <input type="date" id="session-date" required>
+          </label>
+          <label>
+            Hora de início:
+            <input type="time" id="session-time" required>
+          </label>
+          <label>
+            Nº de horas da sessão:
+            <input type="number" id="session-hours" min="1" max="3" value="1" required>
+          </label>
+        </div>
+        <label class="description-label">
+          Descrição:
+          <textarea id="session-desc" placeholder="Faz uma breve descrição da matéria que tens dúvidas."></textarea>
+        </label>
+        <label class="description-label">
+          Email:
+          <input type="email" id="client-email" placeholder="teu.email@exemplo.com" required>
+        </label>
+      </section>
+
+      <!-- 3. Método de Pagamento -->
+      <section class="card section-light">
+        <h2><span class="step">3</span> Método de Pagamento</h2>
+        <div class="payment-methods">
+          <div class="payment-option" data-method="credit">
+            <img src="images/cartao_credito.png" alt="Cartão de Crédito">
+            <span>Cartão de Crédito</span>
+          </div>
+          <div class="payment-option" data-method="mbway">
+            <img src="images/mbway.png" alt="MB Way">
+            <span>MB Way</span>
+          </div>
+          <div class="payment-option" data-method="paypal">
+            <img src="images/PayPal.svg" alt="Paypal">
+            <span>Paypal</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Resumo / Pagamento -->
+      <aside class="summary-card">
+      <h3>Resumo:</h3>
+      <p><strong>Tutor:</strong> <span id="sum-tutor-name">Beatriz Sousa</span></p>
+      <p><strong>Preço por sessão:</strong> <span id="sum-price">5€</span></p>
+      <p><strong>Nº de sessões:</strong> <span id="sum-hours">1</span></p>
+      <p><strong>Dia:</strong> <span id="sum-date">__/__/____</span></p>
+      <p><strong>Hora:</strong> <span id="sum-time">__:__</span></p>
+      <p><strong>Email:</strong> <span id="sum-email">—</span></p>
+      <hr>
+      <p class="total-label">Total:</p>
+      <p class="total-amount" id="sum-total">5,00€</p>
+      <!-- Removemos o <a> e deixamos apenas o submit -->
+      <button type="submit" class="btn-submit">Concluir</button>
+    </aside>
+  </form>
+</main>
+
+  <!-- Footer idêntico ao da Agenda -->
+  <footer>
+    Copyright © Edulink 2025
+  </footer>
+  
+  <script src="js/pagamento.js"></script>
+</body>
+</html>
